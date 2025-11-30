@@ -122,191 +122,246 @@
 
             <section id="section-projets" class="py-20 bg-[color:var(--bg)] border-t border-gray-200">
                 <div class="container mx-auto px-6">
-
+            
                     <!-- Titre principal -->
-                    <h2 class="text-4xl md:text-5xl font-extrabold heading text-center text-[color:var(--text)]">
-                        Projets
-                    </h2>
-                    <p class="mt-4 text-lg text-center text-[color:var(--muted)] max-w-3xl mx-auto">
-                        Une sélection de projets réalisés à l’école et en entreprise.
-                    </p>
-
+                    <div class="text-center">
+                        <h2 class="text-4xl md:text-5xl font-extrabold heading text-[color:var(--text)]">
+                            Projets
+                        </h2>
+            
+                        <!-- Trait décoratif principal -->
+                        <div class="w-20 h-[3px] bg-[color:var(--accent)] mx-auto mt-4 rounded-full"></div>
+            
+                        <p class="mt-4 text-lg text-center text-[color:var(--muted)] max-w-3xl mx-auto">
+                            Une sélection de projets réalisés à l’école et en entreprise.
+                        </p>
+                    </div>
+            
                     <!-- ======================= Projets École ======================= -->
                     <div class="mt-16">
-                        <h3 class="text-3xl font-bold heading text-[color:var(--text)] text-center">Projets école</h3>
-                        <p class="mt-2 text-center text-[color:var(--muted)]">Travaux réalisés dans le cadre du BTS.</p>
-
+            
+                        <h3 class="text-3xl font-bold heading text-[color:var(--text)] text-center">
+                            Projets d'école
+                        </h3>
+                        <!-- Trait sous-titre -->
+                        <div class="w-16 h-[2px] bg-gray-300 mx-auto mt-2 rounded-full"></div>
+            
+                        <p class="mt-2 text-center text-[color:var(--muted)]">
+                            Travaux réalisés dans le cadre du BTS-SIO.
+                        </p>
+            
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Carte projet école 1 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/ecole-1.jpg" alt="Aperçu du projet école 1"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">Gestion de notes</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                Application web pour gérer les notes d’élèves et exporter des relevés.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-blue-50 text-blue-700 border border-blue-200">HTML/CSS</span>
-                                <span class="px-2 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Tailwind</span>
-                                <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">JS</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
-
-                        <!-- Carte projet école 2 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/ecole-2.jpg" alt="Aperçu du projet école 2"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">Bibliothèque en ligne</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                Catalogue de livres avec système d’emprunt et recherche multicritères.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">ASP.NET Core</span>
-                                <span class="px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200">SQL Server</span>
-                                <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">MVC</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
-
-                        <!-- Carte projet école 3 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/ecole-3.jpg" alt="Aperçu du projet école 3"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">Veille techno</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                Site vitrine qui centralise ma veille (articles, synthèses, ressources).
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200">Bootstrap</span>
-                                <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">JS</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
+            
+                            <!-- Carte projet école 1 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/ecole-1.jpg" alt="Aperçu du projet école 1"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Groupy - Site de vente d'achat groupé</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Application web permettant la vente de produit selon un certain nombre de clients.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-sky-50 text-sky-700 border border-sky-200">HTML/CSS</span>
+                                        <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">PHP</span>
+                                        <span class="px-2 py-1 rounded bg-green-50 text-green-700 border border-green-200">MySQL</span>
+                                        <span class="px-2 py-1 rounded bg-teal-50 text-teal-700 border border-teal-200">Bootstrap</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
+                            <!-- Carte projet école 2 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/ecole-2.jpg" alt="Aperçu du projet école 2"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Projet C#</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Ne sais pas encore.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">.NET C#</span>
+                                        <span class="px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200">WPF</span>
+                                        <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">MVC</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
+                            <!-- Carte projet école 3 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/ecole-3.jpg" alt="Aperçu du projet école 3"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Portfolio</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Portoflio actuelle, permettant de presenter mes projets, experiences et amibitions.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">HTML/CSS</span>
+                                        <span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200">TailWind</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
                         </div>
                     </div>
-
+            
                     <!-- ======================= Projets Entreprise ======================= -->
                     <div class="mt-20">
-                        <h3 class="text-3xl font-bold heading text-[color:var(--text)] text-center">Projets entreprise</h3>
-                        <p class="mt-2 text-center text-[color:var(--muted)]">Missions et réalisations en alternance.</p>
-
+            
+                        <h3 class="text-3xl font-bold heading text-[color:var(--text)] text-center">
+                            Projets entreprise
+                        </h3>
+                        <!-- Trait sous-titre -->
+                        <div class="w-16 h-[2px] bg-gray-300 mx-auto mt-2 rounded-full"></div>
+            
+                        <p class="mt-2 text-center text-[color:var(--muted)]">
+                            Missions et réalisations en alternance.
+                        </p>
+            
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Carte projet entreprise 1 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/entreprise-1.jpg" alt="Aperçu du projet entreprise 1"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">Add-in Word — Modèles</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                Complément Word pour insérer des templates avec champs dynamiques.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-sky-50 text-sky-700 border border-sky-200">Office.js</span>
-                                <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">HTML/CSS</span>
-                                <span class="px-2 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">JS</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
+            
+                            <!-- Carte entreprise 1 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/entreprise-1.jpg" alt="Aperçu du projet entreprise 1"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Kit-Alpha</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Maintenance corrective, évolutive et préventive, d'un kit VBA Word.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">VBA</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
+                            <!-- Carte entreprise 2 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/entreprise-2.jpg" alt="Aperçu du projet entreprise 2"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Office Add-ins (abandonnée)</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Complément Office visant a remplacer le Kit VBA sur Word online.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Office.js</span>
+                                        <span class="px-2 py-1 rounded bg-violet-50 text-violet-700 border border-violet-200">HTML/CSS </span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
+                            <!-- Carte entreprise 3 -->
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/entreprise-3.jpg" alt="Aperçu du projet entreprise 3"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Sisyphe — Copie de bases</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Outil interne (ASP.NET MVC) pour copier des bases SQL entre environnements.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-blue-50 text-blue-700 border border-blue-200">ASP.NET Core</span>
+                                        <span class="px-2 py-1 rounded bg-green-50 text-green-700 border border-green-200">C#</span>
+                                        <span class="px-2 py-1 rounded bg-purple-50 text-purple-700 border border-purple-200">MVC</span>
+                                        <span class="px-2 py-1 rounded bg-yellow-50 text-yellow-700 border border-yellow-200">SQL Server</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
 
-                        <!-- Carte projet entreprise 2 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/entreprise-2.jpg" alt="Aperçu du projet entreprise 2"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">SAINT-J — Scores en temps réel</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                App ASP.NET Core + SignalR pour gérer défis et classement entre amis.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">ASP.NET Core</span>
-                                <span class="px-2 py-1 rounded bg-violet-50 text-violet-700 border border-violet-200">SignalR</span>
-                                <span class="px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200">PostgreSQL</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
+                            <div class="hidden lg:block"></div>
 
-                        <!-- Carte projet entreprise 3 -->
-                        <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                            <div class="aspect-[16/9] bg-gray-100">
-                            <img src="assets/projets/entreprise-3.jpg" alt="Aperçu du projet entreprise 3"
-                                class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                            <h4 class="font-semibold text-[color:var(--text)]">Sisyphe — Copie de bases</h4>
-                            <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                Outil interne (ASP.NET MVC) pour copier des bases SQL entre environnements.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">MVC</span>
-                                <span class="px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200">SQL Server</span>
-                                <span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200">Docker</span>
-                            </div>
-                            <div class="mt-4 flex items-center gap-3 text-sm">
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-link-45deg"></i> Démo
-                                </a>
-                                <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                            </div>
-                        </article>
+                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition mx-auto">
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <img src="assets/projets/entreprise-4.jpg" alt="Aperçu du projet entreprise 4"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Crawler JobBoard</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Script Python, recuperant des offres d'emplois sur differents site web cibles.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-blue-50 text-blue-700 border border-blue-200">Python</span>
+                                        <span class="px-2 py-1 rounded bg-green-50 text-green-700 border border-green-200">Selenium</span>
+                                        <span class="px-2 py-1 rounded bg-yellow-50 text-yellow-700 border border-yellow-200">BeatifullSoup</span>
+                                        <span class="px-2 py-1 rounded bg-orange-50 text-orange-700 border border-orange-200">Pandas</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+            
                         </div>
                     </div>
+            
                 </div>
             </section>
 
