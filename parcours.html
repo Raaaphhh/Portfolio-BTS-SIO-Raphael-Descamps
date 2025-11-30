@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio BTS — Sidebar claire</title>
+  <meta name="description" content="Portfolio BTS — navigation à gauche, contenu à droite, ton clair." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    :root {
+      --bg: #f9fafb;
+      --panel: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #0ea5e9;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial;
+    }
+    .heading { letter-spacing: .02em; }
+  </style>
+</head>
+<body>
+    <div class="min-h-screen md:flex">
+      <aside
+        class="fixed inset-y-0 left-0 z-40 h-screen w-72 md:w-[260px]
+              -translate-x-full peer-checked:translate-x-0 transition-transform
+              md:translate-x-0 bg-[color:var(--panel)] shadow-lg border-r border-gray-200"
+      >
+        <div class="h-full flex flex-col">
+
+          <!-- Header -->
+          <div class="flex items-center justify-between px-4 h-16 border-b border-gray-200 bg-gray-50">
+            <a href="#" class="heading font-extrabold tracking-wide text-[color:var(--accent)]">
+              RAPHAËL DESCAMPS
+            </a>
+            <label for="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Fermer le menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </label>
+          </div>
+
+          <!-- Profil -->
+          <div class="p-4 flex flex-col items-center space-y-3">
+            <img src="assets/IMG_3418.jpeg" alt="Photo de profil" class="w-24 h-24 rounded-full border border-gray-300">
+            <div class="text-center space-y-1">
+              <p class="text-sm font-semibold text-gray-800">Raphaël Descamps</p>
+              <p class="text-xs text-gray-500">Étudiant développeur</p>
+
+              <ul class="pt-3 space-y-1">
+                <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                  <i class="bi bi-instagram text-[color:var(--accent)]"></i>
+                  <a href="https://instagram.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                    Instagram
+                  </a>
+                </li>
+
+                <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                  <i class="bi bi-linkedin text-[color:var(--accent)]"></i>
+                  <a href="https://linkedin.com/in/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                    LinkedIn
+                  </a>
+                </li>
+
+                <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                  <i class="bi bi-github text-[color:var(--accent)]"></i>
+                  <a href="https://github.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="p-4 grow overflow-y-auto">
+            <ul class="space-y-2 text-[15px]">
+
+              <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="index.html">
+                  <i class="bi bi-house-door text-lg"></i> Présentation
+                </a>
+              </li>
+
+              <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="parcours.html">
+                  <i class="bi bi-mortarboard text-lg"></i> Mon parcours
+                </a>
+              </li>
+
+              <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="projets.html">
+                  <i class="bi bi-folder2-open text-lg"></i> Projets
+                </a>
+              </li>
+
+              <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="#section-veilles">
+                  <i class="bi bi-journal-text text-lg"></i> Veilles
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+
+          <!-- Footer -->
+          <div class="p-3 border-t border-gray-200 text-xs text-gray-500 text-center">
+            © <span id="year"></span> Raphaël – Tous droits réservés.
+          </div>
+
+        </div>
+      </aside>
+
+      <main class="flex-1 md:ml-[260px] ml-0 bg-[color:var(--bg)]">
+
+        <section id="section-parcours" class="min-h-screen py-20 bg-[color:var(--panel)] border-t border-gray-200">
+          <div class="container mx-auto px-6">
+        
+            <h2 class="text-4xl md:text-5xl font-extrabold heading text-center text-[color:var(--text)]">
+              Mon parcours
+            </h2>
+            <p class="mt-4 text-lg text-center text-[color:var(--muted)] max-w-3xl mx-auto">
+              Voici un aperçu de mon parcours scolaire et professionnel.
+            </p>
+        
+            <!-- Parcours scolaire -->
+            <div class="mt-16">
+              <h3 class="text-3xl font-bold text-center text-[color:var(--text)]">Parcours scolaire</h3>
+              <div class="mt-10 max-w-4xl mx-auto space-y-6">
+        
+                <!-- BTS SIO -->
+                <div class="flex flex-col md:flex-row bg-[color:var(--bg)] border border-gray-200 shadow-sm rounded-xl p-6">
+                  <div class="md:w-1/4 text-[color:var(--accent)] font-bold text-lg">2024 - 2026</div>
+                  <div class="md:w-3/4">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xl font-semibold text-[color:var(--text)]">BTS SIO — SLAM</h4>
+                      <a href="https://ingetis.com" target="_blank" class="text-[color:var(--accent)] hover:underline">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="text-[color:var(--muted)] mt-1"><strong><em>Ingetis</em></strong></p>
+                    <p class="text-[color:var(--muted)] mt-1">Formation centrée sur le développement d’applications.</p>
+                  </div>
+                </div>
+        
+                <!-- AlgoSup -->
+                <div class="flex flex-col md:flex-row bg-[color:var(--bg)] border border-gray-200 shadow-sm rounded-xl p-6">
+                  <div class="md:w-1/4 text-[color:var(--accent)] font-bold text-lg">2023 - 2025</div>
+                  <div class="md:w-3/4">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xl font-semibold text-[color:var(--text)]">École d'ingénieur</h4>
+                    </div>
+                    <p class="text-[color:var(--muted)] mt-1"><strong><em>AlgoSup</em></strong></p>
+                    <p class="text-[color:var(--muted)] mt-1">École internationale d’ingénieurs en développement logiciel.</p>
+                  </div>
+                </div>
+        
+                <!-- Lycée Rotrou -->
+                <div class="flex flex-col md:flex-row bg-[color:var(--bg)] border border-gray-200 shadow-sm rounded-xl p-6">
+                  <div class="md:w-1/4 text-[color:var(--accent)] font-bold text-lg">2020 - 2023</div>
+                  <div class="md:w-3/4">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xl font-semibold text-[color:var(--text)]">Baccalauréat Général</h4>
+                      <a href="https://www.lyceerotroudreux.com/" target="_blank" class="text-[color:var(--accent)] hover:underline">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="text-[color:var(--muted)] mt-1"><strong><em>Lycée Rotrou</em></strong></p>
+                    <p class="text-[color:var(--muted)] mt-1">Spécialités : S.V.T & N.S.I — Option mathématiques.</p>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+        
+            <!-- Parcours professionnel -->
+            <div class="mt-20">
+              <h3 class="text-3xl font-bold text-center text-[color:var(--text)]">Parcours professionnel</h3>
+        
+              <div class="mt-10 max-w-4xl mx-auto space-y-6">
+        
+                <!-- Alternance -->
+                <div class="flex flex-col md:flex-row bg-[color:var(--bg)] border border-gray-200 shadow-sm rounded-xl p-6">
+                  <div class="md:w-1/4 text-[color:var(--accent)] font-bold text-lg">2024 - 2026</div>
+                  <div class="md:w-3/4">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xl font-semibold text-[color:var(--text)]">Alternance — Développeur</h4>
+                      <a href="https://www.groupe-alpha.com/" target="_blank" class="text-[color:var(--accent)] hover:underline">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="text-[color:var(--muted)] mt-1"><strong><em>Groupe Alpha — Secafi</em></strong></p>
+                    <p class="text-[color:var(--muted)] mt-1">Développement d’outils internes et automatisation.</p>
+                  </div>
+                </div>
+        
+                <!-- Stage -->
+                <div class="flex flex-col md:flex-row bg-[color:var(--bg)] border border-gray-200 shadow-sm rounded-xl p-6">
+                  <div class="md:w-1/4 text-[color:var(--accent)] font-bold text-lg">2022</div>
+                  <div class="md:w-3/4">
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xl font-semibold text-[color:var(--text)]">Stage de 3ᵉ — Assistant informatique</h4>
+                      <a href="https://www.groupe-alpha.com/" target="_blank" class="text-[color:var(--accent)] hover:underline">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="text-[color:var(--muted)] mt-1"><strong><em>Groupe Alpha — Secafi</em></strong></p>
+                    <p class="text-[color:var(--muted)] mt-1">Création de support digitale expliquant le rôle de Secafi.</p>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+        
+          </div>
+        </section>
+
+        <section id="section-entreprise" class="py-20 bg-[color:var(--bg)] border-t border-gray-200">
+          <div class="container mx-auto px-6">
+        
+            <!-- Titre + Logo -->
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold heading text-[color:var(--text)] text-center md:text-left">
+              Groupe Alpha • Secafi
+            </h2>
+          
+            <!-- Logo -->
+            <img 
+              src="assets/logo_alpha.png" 
+              alt="Logo Groupe Alpha" 
+              class="hidden md:block w-80 h-auto opacity-90"
+            />
+            </div>
+            
+            <p class="mt-3 text-center md:text-left text-[color:var(--muted)] max-w-5xl mx-auto">
+              Contexte professionnel de mon alternance
+            </p>
+        
+            <!-- Grid -->
+            <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        
+              <!-- Groupe Alpha -->
+              <div class="bg-[color:var(--panel)] border border-gray-200 rounded-2xl shadow-sm p-8">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-buildings text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Le Groupe Alpha</h3>
+                </div>
+        
+                <div class="mt-6 space-y-3 text-[color:var(--muted)]">
+                  <p><strong class="text-[color:var(--text)]">Fondé :</strong> 1983</p>
+                  <p><strong class="text-[color:var(--text)]">Collaborateurs :</strong> ~900</p>
+                  <p><strong class="text-[color:var(--text)]">Secteur :</strong> Conseil social, économique et environnemental</p>
+                </div>
+        
+                <p class="mt-6 text-[color:var(--muted)] leading-relaxed">
+                  Le groupe accompagne entreprises, salariés et acteurs publics dans 
+                  la transformation économique et sociale grâce à ses différentes expertises.
+                </p>
+              </div>
+        
+              <!-- Secafi -->
+              <div class="bg-[color:var(--panel)] border border-gray-200 rounded-2xl shadow-sm p-8">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-briefcase text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Secafi</h3>
+                </div>
+        
+                <div class="mt-6 space-y-3 text-[color:var(--muted)]">
+                  <p><strong class="text-[color:var(--text)]">Spécialité :</strong> Expertise CSE / Audit social</p>
+                  <p><strong class="text-[color:var(--text)]">Clients :</strong> CSE, syndicats, salariés</p>
+                  <p><strong class="text-[color:var(--text)]">Domaines :</strong> Finance, RH, santé au travail, conditions de travail</p>
+                </div>
+        
+                <p class="mt-6 text-[color:var(--muted)] leading-relaxed">
+                  Secafi aide les représentants du personnel à analyser la situation sociale et économique 
+                  des entreprises et à améliorer le dialogue social.
+                </p>
+              </div>
+        
+              <!-- Mon service -->
+              <div class="bg-[color:var(--panel)] border border-gray-200 rounded-2xl shadow-sm p-8 md:col-span-2">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-diagram-3 text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Mon service</h3>
+                </div>
+              
+                <p class="mt-4 text-[color:var(--muted)] leading-relaxed">
+                  Je travaille au sein du <strong class="text-[color:var(--text)]">pôle D.S.I.S.N</strong>, 
+                  dédié à la création d’<strong class="text-[color:var(--text)]">outils internes</strong> pour faciliter et optimiser 
+                  le travail des collaborateurs du Groupe Alpha.  
+                  Le service modernise les processus, automatise certaines tâches et met en place des solutions adaptées aux besoins métier.
+                </p>
+              
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-[color:var(--text)]">
+              
+                  <div class="p-4 bg-gray-50 rounded-xl border text-center">
+                    <i class="bi bi-tools text-xl text-[color:var(--accent)]"></i>
+                    <p class="mt-1 text-sm">Outils internes</p>
+                  </div>
+              
+                  <div class="p-4 bg-gray-50 rounded-xl border text-center">
+                    <i class="bi bi-people text-xl text-[color:var(--accent)]"></i>
+                    <p class="mt-1 text-sm">Solutions pour collaborateurs</p>
+                  </div>
+              
+                  <div class="p-4 bg-gray-50 rounded-xl border text-center">
+                    <i class="bi bi-globe2 text-xl text-[color:var(--accent)]"></i>
+                    <p class="mt-1 text-sm">Applications Web internes</p>
+                  </div>
+              
+                </div>
+              </div>
+        
+              <!-- Mon rôle -->
+              <div class="bg-[color:var(--panel)] border border-gray-200 rounded-2xl shadow-sm p-8 md:col-span-2">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-person-workspace text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Mon rôle en alternance</h3>
+                </div>
+              
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-[color:var(--muted)]">
+              
+                  <div class="flex flex-col items-center text-center">
+                    <i class="bi bi-globe2 text-2xl text-[color:var(--accent)]"></i>
+                    <p class="mt-2 text-sm">ASP.NET Core MVC</p>
+                  </div>
+              
+                  <div class="flex flex-col items-center text-center">
+                    <i class="bi bi-microsoft text-2xl text-[color:var(--accent)]"></i>
+                    <p class="mt-2 text-sm">Complément Word (Office.js)</p>
+                  </div>
+              
+                  <div class="flex flex-col items-center text-center">
+                    <i class="bi bi-braces text-2xl text-[color:var(--accent)]"></i>
+                    <p class="mt-2 text-sm">Kit VBA</p>
+                  </div>
+              
+                  <div class="flex flex-col items-center text-center">
+                    <i class="bi bi-terminal text-2xl text-[color:var(--accent)]"></i>
+                    <p class="mt-2 text-sm">Crawler Python</p>
+                  </div>
+              
+                </div>
+              
+                <p class="mt-8 text-[color:var(--muted)] leading-relaxed text-center max-w-3xl mx-auto">
+                  En tant que <strong class="text-[color:var(--text)]">étudiant développeur généraliste</strong>, 
+                  j'interviens sur des projets variés : création d’applications ASP.NET Core MVC, 
+                  développement d’un complément Word en <strong>Office.js</strong>, automatisation via un 
+                  <strong>kit VBA</strong>, ainsi que la réalisation d’un <strong>crawler Python</strong>.  
+                  Cette polyvalence me permet d’apporter des solutions adaptées aux besoins de l’entreprise.
+                </p>
+              </div>
+        
+            </div>
+          </div>
+        </section>
+
+        <section id="section-competences" class="py-20 bg-[color:var(--panel)] border-t border-gray-200">
+          <div class="container mx-auto px-6">
+        
+            <!-- Titre -->
+            <h2 class="text-4xl md:text-5xl font-extrabold heading text-center text-[color:var(--text)]">
+              Mes compétences
+            </h2>
+            <p class="mt-3 text-center text-[color:var(--muted)]">
+              Un aperçu de mes compétences techniques et professionnelles :
+            </p>
+        
+            <!-- Grille -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        
+        
+              <!-- 🟦 Bloc : Langages & Techniques -->
+              <div class="bg-[color:var(--bg)] rounded-2xl shadow-sm border border-gray-200 p-8">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-code-square text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Langages & Technologies</h3>
+                </div>
+        
+                <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-filetype-html text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">HTML</p>
+                  </div>
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-filetype-css text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">CSS</p>
+                  </div>
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-filetype-js text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">JavaScript</p>
+                  </div>
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-braces text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">C#</p>
+                  </div>
+
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-filetype-php text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">PHP</p>
+                  </div>
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-terminal text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">Python</p>
+                  </div>
+        
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-braces-asterisk text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">VBA</p>
+                  </div>
+
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-database text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">MySQL</p>
+                  </div>
+
+                  <div class="p-4 bg-white border rounded-xl">
+                    <i class="bi bi-server text-2xl text-[color:var(--accent)]"></i>
+                    <p class="text-sm mt-1">SSMS</p>
+                  </div>
+        
+                </div>
+        
+                <!-- Frameworks -->
+                <h4 class="mt-8 font-semibold text-[color:var(--text)] text-lg">Frameworks & outils :</h4>
+                <ul class="mt-3 space-y-2 text-[color:var(--muted)] text-sm">
+                  <li>• ASP.NET Core MVC</li>
+                  <li>• Tailwind CSS, Bootstrap</li>
+                  <li>• Selenium, BeatifulSoup & Pandas</li>
+                  <li>• Office.js (Complément Word)</li>
+                  <li>• Git / GitHub</li>
+                </ul>
+              </div>
+        
+        
+              <!-- 🟩 Bloc : Compétences professionnelles -->
+              <div class="bg-[color:var(--bg)] rounded-2xl shadow-sm border border-gray-200 p-8">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-person-lines-fill text-3xl text-[color:var(--accent)]"></i>
+                  <h3 class="text-2xl font-semibold text-[color:var(--text)]">Compétences professionnelles</h3>
+                </div>
+        
+                <div class="mt-6 space-y-6">
+        
+                  <div class="flex gap-4">
+                    <i class="bi bi-people text-2xl text-[color:var(--accent)]"></i>
+                    <div>
+                      <h4 class="font-semibold text-[color:var(--text)]">Travail en équipe</h4>
+                      <p class="text-sm text-[color:var(--muted)]">
+                        Communication, gestion de tâches, travail en agilité avec des collaborateurs.
+                      </p>
+                    </div>
+                  </div>
+        
+                  <div class="flex gap-4">
+                    <i class="bi bi-pencil-square text-xl text-[color:var(--accent)]"></i>
+                    <div>
+                      <h4 class="font-semibold text-[color:var(--text)]">Rédaction de documentation</h4>
+                      <p class="text-sm text-[color:var(--muted)]">
+                        Documentation technique, procédures internes, guides utilisateurs.
+                      </p>
+                    </div>
+                  </div>
+        
+                  <div class="flex gap-4">
+                    <i class="bi bi-tools text-xl text-[color:var(--accent)]"></i>
+                    <div>
+                      <h4 class="font-semibold text-[color:var(--text)]">Adaptations aux clients</h4>
+                      <p class="text-sm text-[color:var(--muted)]">
+                        Création de solutions internes adaptées aux besoins métier et aux collaborateurs.
+                      </p>
+                    </div>
+                  </div>
+        
+                  <div class="flex gap-4">
+                    <i class="bi bi-shield-check text-xl text-[color:var(--accent)]"></i>
+                    <div>
+                      <h4 class="font-semibold text-[color:var(--text)]">Qualité & bonnes pratiques</h4>
+                      <p class="text-sm text-[color:var(--muted)]">
+                        Code structuré, lisible, versionné, respect des normes internes.
+                      </p>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+        
+            </div>
+        
+          </div>
+        </section>
+
+        <section id="section-outils" class="py-20 bg-[color:var(--bg)] border-t border-gray-200">
+          <div class="container mx-auto px-6">
+        
+            <!-- Titre -->
+            <h2 class="text-4xl md:text-5xl font-extrabold heading text-center text-[color:var(--text)]">
+              Mes outils
+            </h2>
+            <p class="mt-3 text-center text-[color:var(--muted)]">
+              Les logiciels, environnements et outils que j’utilise au quotidien :
+            </p>
+        
+            <!-- Icônes sans retour à la ligne -->
+            <div class="mt-12 flex justify-center gap-16 items-start flex-nowrap overflow-x-auto py-4">
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-github text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">Git / GitHub</span>
+              </div>
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-code-square text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">VS Code</span>
+              </div>
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-microsoft text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">Visual Studio</span>
+              </div>
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-lightning-charge text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">Rider (JetBrains)</span>
+              </div>
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-box-seam text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">Docker</span>
+              </div>
+        
+              <div class="flex flex-col items-center text-center min-w-[120px]">
+                <i class="bi bi-server text-4xl text-[color:var(--accent)]"></i>
+                <span class="mt-2 text-sm font-medium text-[color:var(--text)] whitespace-nowrap">SSMS / pgAdmin / MySQL</span>
+              </div>
+        
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
