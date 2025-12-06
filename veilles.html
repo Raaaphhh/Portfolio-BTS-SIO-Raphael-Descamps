@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veilles — Raphaël Descamps</title>
+  <meta name="description" content="Portfolio BTS — navigation à gauche, contenu à droite, ton clair." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    :root {
+      --bg: #f9fafb;
+      --panel: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #0ea5e9;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial;
+    }
+    .heading { letter-spacing: .02em; }
+  </style>
+</head>
+<body>
+    <div class="min-h-screen md:flex">
+        <aside
+            class="fixed inset-y-0 left-0 z-40 h-screen w-72 md:w-[260px]
+                -translate-x-full peer-checked:translate-x-0 transition-transform
+                md:translate-x-0 bg-[color:var(--panel)] shadow-lg border-r border-gray-200"
+        >
+            <div class="h-full flex flex-col">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 h-16 border-b border-gray-200 bg-gray-50">
+                <a href="#" class="heading font-extrabold tracking-wide text-[color:var(--accent)]">
+                RAPHAËL DESCAMPS
+                </a>
+                <label for="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Fermer le menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                </label>
+            </div>
+
+            <!-- Profil -->
+            <div class="p-4 flex flex-col items-center space-y-3">
+                <img src="assets/IMG_3418.jpeg" alt="Photo de profil" class="w-24 h-24 rounded-full border border-gray-300">
+                <div class="text-center space-y-1">
+                <p class="text-sm font-semibold text-gray-800">Raphaël Descamps</p>
+                <p class="text-xs text-gray-500">Étudiant développeur</p>
+
+                <ul class="pt-3 space-y-1">
+                    <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                    <i class="bi bi-instagram text-[color:var(--accent)]"></i>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                        Instagram
+                    </a>
+                    </li>
+
+                    <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                    <i class="bi bi-linkedin text-[color:var(--accent)]"></i>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                        LinkedIn
+                    </a>
+                    </li>
+
+                    <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                    <i class="bi bi-github text-[color:var(--accent)]"></i>
+                    <a href="https://github.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                        GitHub
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-4 grow overflow-y-auto">
+                <ul class="space-y-2 text-[15px]">
+
+                <li>
+                    <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="index.html">
+                    <i class="bi bi-house-door text-lg"></i> Présentation
+                    </a>
+                </li>
+
+                <li>
+                    <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="parcours.html">
+                    <i class="bi bi-mortarboard text-lg"></i> Mon parcours
+                    </a>
+                </li>
+
+                <li>
+                    <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="projets.html">
+                    <i class="bi bi-folder2-open text-lg"></i> Projets
+                    </a>
+                </li>
+
+                <li>
+                    <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="veilles.html">
+                    <i class="bi bi-journal-text text-lg"></i> Veilles
+                    </a>
+                </li>
+
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <div class="p-3 border-t border-gray-200 text-xs text-gray-500 text-center">
+                © <span id="year"></span> Raphaël – Tous droits réservés.
+            </div>
+
+            </div>
+        </aside>
+
+        <main class="flex-1 md:ml-[260px] ml-0 bg-[color:var(--bg)]">
+
+            <section class="relative w-full min-h-screen flex items-center justify-center text-center">
+                <div class="absolute inset-0 bg-cover bg-center"
+                     style="background-image: url('assets/backgroundVeille.jpg');">
+                </div>
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">
+                        VEILLE TECHNOLOGIQUE
+                    </h1>
+                    <div class="w-24 h-[3px] bg-white mx-auto mt-4 rounded-full"></div>
+                </div>
+            </section>
+            
+
+            <!-- ========================= 1) INTRODUCTION ========================= -->
+            <section class="py-20 px-6 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-6">Introduction</h2>
+                <p class="text-lg text-[color:var(--muted)] leading-relaxed text-center">
+                    La veille technologique consiste à surveiller de manière systématique les évolutions, innovations 
+                    et tendances d’un domaine donné. Elle permet à un développeur de rester informé des avancées, 
+                    d’anticiper les changements et de maintenir ses compétences à jour dans un secteur en constante évolution 
+                    comme l’informatique.
+                </p>
+                <div class="w-20 h-[3px] bg-[color:var(--accent)] mx-auto mt-6 rounded-full"></div>
+            </section>
+
+
+            <!-- ========================= 2) SUJET DE VEILLE ========================= -->
+            <section class="py-20 px-6 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-6">Mon sujet : Les Progressive Web Apps (PWA)</h2>
+
+                <p class="text-lg text-[color:var(--muted)] leading-relaxed">
+                    J'ai choisi de faire ma veille technologique sur les Progressive Web Apps (PWA). 
+                    Cette technologie représente une évolution majeure du développement web : elle permet de créer 
+                    des applications hybrides combinant les avantages du web (accessibilité, référencement, mise à jour 
+                    automatique) et ceux des applications natives (installation, mode hors-ligne, notifications push).
+                    <br><br>
+                    Les PWA répondent à des besoins concrets des entreprises : réduire les coûts de développement 
+                    (une seule application pour tous les supports), améliorer l'expérience utilisateur et augmenter 
+                    les taux de conversion. Des entreprises comme <strong>Twitter</strong>, <strong>Starbucks</strong> 
+                    ou <strong>Alibaba</strong> ont obtenu des résultats remarquables grâce à cette technologie.
+                    <br><br>
+                    Ce sujet me permet de suivre l’évolution du développement web moderne, de comprendre les choix 
+                    stratégiques des entreprises et d’approfondir mes connaissances en JavaScript, Service Workers et API web modernes.
+                </p>
+            </section>
+
+
+            <!-- ========================= 3) OUTILS DE VEILLE ========================= -->
+            <section class="py-20 px-6 max-w-6xl mx-auto bg-gray-50 border-y border-gray-200">
+                <h2 class="text-3xl font-bold text-center mb-10">Mes outils et méthodes de veille</h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+
+                    <!-- RSS -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">📰 Flux RSS</h4>
+                        <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
+                            <li><strong>Feedly</strong> — centralisation des flux</li>
+                            <li>web.dev (Google)</li>
+                            <li>MDN Web Docs</li>
+                            <li>CSS-Tricks</li>
+                            <li>Dev.to</li>
+                        </ul>
+                    </div>
+
+                    <!-- Google Alerts -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">🔔 Google Alerts</h4>
+                        <p class="text-[color:var(--muted)] text-sm">
+                            Mots-clés surveillés :
+                        </p>
+                        <ul class="text-[color:var(--muted)] text-sm mt-1">
+                            <li>• Progressive Web App</li>
+                            <li>• PWA Case Study</li>
+                            <li>• Service Worker</li>
+                        </ul>
+                        <p class="text-[color:var(--muted)] text-sm mt-2">
+                            Fréquence : alertes hebdomadaires
+                        </p>
+                    </div>
+
+                    <!-- Sites -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">🌐 Sites spécialisés</h4>
+                        <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
+                            <li>web.dev / PWA Guides</li>
+                            <li>Mozilla MDN</li>
+                            <li>Medium (#PWA)</li>
+                            <li>Chrome Developers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletters -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">📧 Newsletters</h4>
+                        <ul class="text-[color:var(--muted)] text-sm">
+                            <li>JavaScript Weekly</li>
+                            <li>Frontend Focus</li>
+                            <li>Web.dev Newsletter</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vidéos -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">🎥 YouTube / Conférences</h4>
+                        <ul class="text-[color:var(--muted)] text-sm">
+                            <li>Google Chrome Developers</li>
+                            <li>Fireship</li>
+                            <li>Grafikart</li>
+                            <li>Google I/O</li>
+                        </ul>
+                    </div>
+
+                    <!-- Réseaux -->
+                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2">💼 Réseaux professionnels</h4>
+                        <ul class="text-[color:var(--muted)] text-sm">
+                            <li>LinkedIn (#PWA #WebDev)</li>
+                            <li>Twitter/X (@ChromiumDev)</li>
+                            <li>GitHub (Workbox, next-pwa)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- ========================= 4) ARTICLES SUIVIS ========================= -->
+            <section class="py-20 px-6 max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-10">Ressources et articles marquants</h2>
+
+                <ul class="space-y-6 text-[color:var(--muted)] text-lg">
+
+                    <li>
+                        <strong>"What are Progressive Web Apps?" — web.dev</strong><br>
+                        Introduction complète aux PWA et leurs avantages.
+                    </li>
+
+                    <li>
+                        <strong>"Making a PWA work offline with Service Workers" — MDN</strong><br>
+                        Guide technique sur le fonctionnement hors-ligne.
+                    </li>
+
+                    <li>
+                        <strong>"Twitter Lite Case Study" — web.dev</strong><br>
+                        Comment Twitter a réduit son poids et augmenté son engagement grâce à une PWA.
+                    </li>
+
+                    <li>
+                        <strong>"PWA vs Native Apps: Which is Better in 2024?" — Medium</strong><br>
+                        Analyse comparative sur les performances et les usages.
+                    </li>
+
+                    <li>
+                        <strong>"Installing PWAs on Desktop" — web.dev</strong><br>
+                        Étude sur l’adoption des PWA sur ordinateur.
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!-- ========================= 5) SYNTHÈSE ========================= -->
+            <section class="py-20 px-6 max-w-4xl mx-auto bg-gray-50 border-y border-gray-200">
+                <h2 class="text-3xl font-bold text-center mb-6">Ce que j’ai appris grâce à ma veille</h2>
+
+                <p class="text-lg text-[color:var(--muted)] leading-relaxed">
+                    Grâce à ma veille sur les PWA, j’ai pu comprendre les enjeux techniques et stratégiques 
+                    des applications web modernes. J’ai découvert les outils essentiels comme Workbox, 
+                    les limites du support iOS, les études de cas des grandes entreprises et les nouvelles API du web 
+                    (Background Sync, Web Share, Web App Manifest).
+                    <br><br>
+                    Cette veille enrichit mes projets personnels et me permet d’adopter de bonnes pratiques 
+                    dans mes développements futurs.
+                </p>
+            </section>
+
+
+            <!-- ========================= 6) FRÉQUENCE DE VEILLE ========================= -->
+            <section class="py-20 px-6 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-6">Fréquence de veille</h2>
+
+                <p class="text-lg text-[color:var(--muted)] leading-relaxed text-center">
+                    Je consacre environ <strong>15 minutes par jour</strong> à ma veille technologique.  
+                    Je consulte mes flux RSS, lis quelques articles, puis je sauvegarde les ressources pertinentes.  
+                    Une fois par semaine, je prends une heure pour approfondir un sujet précis ou tester une nouvelle technologie.
+                </p>
+            </section>
+
+
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
