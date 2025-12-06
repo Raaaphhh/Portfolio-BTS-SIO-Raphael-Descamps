@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tableau de synthèse — Raphaël Descamps</title>
+  <meta name="description" content="Portfolio BTS — navigation à gauche, contenu à droite, ton clair." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    :root {
+      --bg: #f9fafb;
+      --panel: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #0ea5e9;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial;
+    }
+    .heading { letter-spacing: .02em; }
+  </style>
+</head>
+<body>
+    <div class="min-h-screen md:flex">
+        <aside
+        class="fixed inset-y-0 left-0 z-40 h-screen w-72 md:w-[260px]
+                -translate-x-full peer-checked:translate-x-0 transition-transform
+                md:translate-x-0 bg-[color:var(--panel)] shadow-lg border-r border-gray-200"
+        >
+        <div class="h-full flex flex-col">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 h-16 border-b border-gray-200 bg-gray-50">
+            <a href="#" class="heading font-extrabold tracking-wide text-[color:var(--accent)]">
+                RAPHAËL DESCAMPS
+            </a>
+            <label for="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Fermer le menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </label>
+            </div>
+
+            <!-- Profil -->
+            <div class="p-4 flex flex-col items-center space-y-3">
+            <img src="assets/pdpRaph.jpeg" alt="Photo de profil" class="w-24 h-24 rounded-full border border-gray-300">
+            <div class="text-center space-y-1">
+                <p class="text-sm font-semibold text-gray-800">Raphaël Descamps</p>
+                <p class="text-xs text-gray-500">Étudiant développeur</p>
+
+                <ul class="pt-3 space-y-1">
+                <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                    <i class="bi bi-linkedin text-[color:var(--accent)]"></i>
+                    <a href="https://linkedin.com/in/descamps-raphael" target="_blank" class="underline text-[color:var(--accent)]">
+                    LinkedIn
+                    </a>
+                </li>
+
+                <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
+                    <i class="bi bi-github text-[color:var(--accent)]"></i>
+                    <a href="https://github.com/Raaaphhh" target="_blank" class="underline text-[color:var(--accent)]">
+                    GitHub
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-4 grow overflow-y-auto">
+            <ul class="space-y-2 text-[15px]">
+
+                <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="index.html">
+                    <i class="bi bi-house-door text-lg"></i> Présentation
+                </a>
+                </li>
+
+                <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="parcours.html">
+                    <i class="bi bi-mortarboard text-lg"></i> Mon parcours
+                </a>
+                </li>
+
+                <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="projets.html">
+                    <i class="bi bi-folder2-open text-lg"></i> Projets
+                </a>
+                </li>
+
+                <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="tableau.html">
+                    <i class="bi bi-table text-lg"></i> Tableau de synthèse
+                </a>
+                </li>
+
+                <li>
+                <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="veilles.html">
+                    <i class="bi bi-journal-text text-lg"></i> Veilles
+                </a>
+                </li>
+
+            </ul>
+            </nav>
+
+            <!-- Footer -->
+            <div class="p-3 border-t border-gray-200 text-xs text-gray-500 text-center">
+            © <span id="year"></span> Raphaël – Tous droits réservés.
+            </div>
+
+        </div>
+        </aside>
+
+        <main class="flex-1 md:ml-[260px] ml-0 bg-[color:var(--bg)]">
+
+            <section id="section-tableau" class="py-10 md:py-16">
+                <div class="max-w-6xl mx-auto px-4 md:px-6">
+                    <!-- Titre de la page -->
+                    <div class="text-center mb-8 md:mb-10">
+                    <h1 class="text-3xl md:text-4xl font-extrabold heading text-[color:var(--text)]">
+                        Tableau de synthèse – Épreuve E4
+                    </h1>
+                    <div class="w-24 h-[3px] bg-[color:var(--accent)] mx-auto mt-3 rounded-full"></div>
+                    <p class="mt-4 text-sm md:text-base text-[color:var(--muted)]">
+                        Réalisations professionnelles mobilisées pour l’épreuve E4 du BTS SIO option SLAM.
+                    </p>
+                    </div>
+            
+                    <!-- Tableau de synthèse -->
+                    <div class="overflow-x-auto bg-[color:var(--panel)] border border-gray-200 rounded-2xl shadow-sm">
+                    <table class="min-w-full border-collapse text-[11px] md:text-xs">
+                        
+                        <thead class="bg-gray-50">
+                        <!-- Ligne 1 : grandes rubriques -->
+                        <tr>
+                            <th rowspan="2" class="border border-gray-300 px-3 py-2 text-left align-top w-2/5">
+                            Réalisations professionnelles<br>
+                            <span class="font-normal text-[10px] text-[color:var(--muted)]">
+                                (intitulé et liste des documents et productions associés)
+                            </span>
+                            </th>
+                            <th rowspan="2" class="border border-gray-300 px-3 py-2 text-center align-top w-[90px]">
+                            Période
+                            </th>
+                            <th colspan="6" class="border border-gray-300 px-3 py-2 text-center align-top">
+                            Compétences mobilisées
+                            </th>
+                        </tr>
+            
+                        <!-- Ligne 2 : intitulés des compétences -->
+                        <tr>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Gérer le patrimoine<br>informatique
+                            </th>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Répondre aux incidents et aux demandes<br>d’assistance et d’évolution
+                            </th>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Développer la présence<br>en ligne de l’organisation
+                            </th>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Travailler<br>en mode projet
+                            </th>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Mettre à disposition des utilisateurs<br>un service informatique
+                            </th>
+                            <th class="border border-gray-300 px-2 py-2 align-top">
+                            Organiser son<br>développement professionnel
+                            </th>
+                        </tr>
+                        </thead>
+            
+                        <tbody class="bg-white">
+            
+                        <!-- ================== RÉALISATIONS EN COURS DE FORMATION ================== -->
+            
+                        <!-- 1) Groupy -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Développement d'une application web de gestion de ventes groupées</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Site de vente en ligne permettant de proposer des produits en achat groupé.<br>
+                                Technologies : PHP, HTML, CSS, MySQL, Bootstrap. Hébergé sur un serveur web.
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            10/09/2025 au 01/12/2025
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 2) Application lourde C# -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Développement d'une application lourde</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Application cliente réalisée en WPF avec .NET / C# (gestion de données locales,
+                                interface graphique, logique métier).
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            02/12/2025 au 15/04/2026
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 3) Portfolio -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Réalisation d'un site portfolio</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Portfolio personnel en HTML, CSS et JavaScript pour présenter mon parcours,
+                                mes projets et ma veille. Hébergement web mis en place.
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            10/09/2025 au 15/04/2025
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- Séparateur logique (facultatif visuel) -->
+                        <tr>
+                            <td colspan="8" class="border-t border-gray-300 bg-gray-50 text-[10px] text-center py-1 text-[color:var(--muted)]">
+                            Réalisations en milieu professionnel
+                            </td>
+                        </tr>
+            
+                        <!-- ================== RÉALISATIONS EN MILIEU PROFESSIONNEL ================== -->
+            
+                        <!-- 4) Kit-Alpha (VBA) -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Kit-Alpha – Kit VBA Word</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Maintenance corrective, évolutive et préventive d’un kit VBA Word
+                                fournissant des modèles de documents aux collaborateurs (Groupe Alpha).
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            31/05/2024 au 16/08/2024
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 5) Office Add-ins -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Office Add-ins – Complément Word (projet abandonné)</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Développement d’un complément Office (Office.js, HTML, CSS) visant à remplacer
+                                le Kit-Alpha sur Word en ligne, avec insertion de modèles et champs dynamiques.
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            01/09/2025 au 01/12/2025
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 6) Sisyphe -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Sisyphe – Application web interne</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Application ASP.NET Core MVC permettant aux équipes techniques de copier des bases SQL
+                                d’un environnement à un autre (DEV, RECETTE, PROD) via une interface web.
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            31/05/2024 au 16/08/2024
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 7) Crawler JobBoard -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Crawler JobBoard – Script Python</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Crawler Python pour récupérer des offres d’emploi sur différents sites web cibles,
+                                nettoyer les données et les stocker pour analyse ultérieure (Selenium, BeautifulSoup, Pandas).
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            01/09/2024 au 01/06/2026
+                            </td>
+                            <!-- Gérer le patrimoine -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Répondre aux incidents -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Développer la présence en ligne -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <!-- Travailler en mode projet -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Mettre à disposition un service -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                            <!-- Organiser son développement pro -->
+                            <td class="border border-gray-300 px-2 py-2 text-center">✦</td>
+                        </tr>
+            
+                        <!-- 8) Ticket App Client (prévu / en cours) -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 align-top">
+                            <strong>Ticket App Client – Application de gestion de tickets</strong><br>
+                            <span class="text-[color:var(--muted)]">
+                                Application web de gestion de tickets par service : création, suivi, modification
+                                et affichage des demandes des utilisateurs (ASP.NET Core MVC, C#, SQL Server).
+                            </span>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 text-center align-top whitespace-nowrap">
+                            <!-- Période non renseignée dans le tableau source -->
+                            </td>
+                            <!-- Compétences à compléter si besoin -->
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                            <td class="border border-gray-300 px-2 py-2 text-center"></td>
+                        </tr>
+            
+                        </tbody>
+                    </table>
+                    </div>
+          
+                </div>
+            </section>
+          
+        </main>
+          
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
