@@ -49,29 +49,22 @@
 
             <!-- Profil -->
             <div class="p-4 flex flex-col items-center space-y-3">
-                <img src="assets/IMG_3418.jpeg" alt="Photo de profil" class="w-24 h-24 rounded-full border border-gray-300">
+                <img src="assets/pdpRaph.jpeg" alt="Photo de profil" class="w-24 h-24 rounded-full border border-gray-300">
                 <div class="text-center space-y-1">
                 <p class="text-sm font-semibold text-gray-800">Raphaël Descamps</p>
                 <p class="text-xs text-gray-500">Étudiant développeur</p>
 
                 <ul class="pt-3 space-y-1">
                     <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
-                    <i class="bi bi-instagram text-[color:var(--accent)]"></i>
-                    <a href="https://instagram.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
-                        Instagram
-                    </a>
-                    </li>
-
-                    <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
                     <i class="bi bi-linkedin text-[color:var(--accent)]"></i>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                    <a href="https://linkedin.com/in/descamps-raphael" target="_blank" class="underline text-[color:var(--accent)]">
                         LinkedIn
                     </a>
                     </li>
 
                     <li class="text-xs text-gray-500 flex items-center gap-2 justify-center">
                     <i class="bi bi-github text-[color:var(--accent)]"></i>
-                    <a href="https://github.com/yourusername" target="_blank" class="underline text-[color:var(--accent)]">
+                    <a href="https://github.com/Raaaphhh" target="_blank" class="underline text-[color:var(--accent)]">
                         GitHub
                     </a>
                     </li>
@@ -98,6 +91,12 @@
                 <li>
                     <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="projets.html">
                     <i class="bi bi-folder2-open text-lg"></i> Projets
+                    </a>
+                </li>
+
+                <li>
+                    <a class="flex items-center gap-2 px-3 py-3 rounded-lg hover:bg-gray-100" href="tableau.html">
+                    <i class="bi bi-table text-lg"></i> Tableau de synthèse
                     </a>
                 </li>
 
@@ -250,37 +249,86 @@
 
 
             <!-- ========================= 4) ARTICLES SUIVIS ========================= -->
-            <section class="py-20 px-6 max-w-5xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-10">Ressources et articles marquants</h2>
+            <section class="py-20 px-6 max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Ressources et articles marquants</h2>
 
-                <ul class="space-y-6 text-[color:var(--muted)] text-lg">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <li>
-                        <strong>"What are Progressive Web Apps?" — web.dev</strong><br>
-                        Introduction complète aux PWA et leurs avantages.
-                    </li>
+                    <!-- Carte 1 -->
+                    <article class="p-6 bg-white shadow rounded-xl border border-gray-200 hover:shadow-lg transition">
+                        <h4 class="font-semibold text-lg text-[color:var(--text)]">
+                            "What are Progressive Web Apps?" — web.dev
+                        </h4>
+                        <p class="text-sm text-[color:var(--muted)] mt-3">
+                            Introduction complète aux PWA et leurs avantages.
+                        </p>
+                        <a href="https://web.dev/what-are-pwas/" target="_blank"
+                        class="inline-flex items-center gap-1 text-[color:var(--accent)] mt-4 text-sm hover:underline">
+                            Consulter l’article <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </article>
 
-                    <li>
-                        <strong>"Making a PWA work offline with Service Workers" — MDN</strong><br>
-                        Guide technique sur le fonctionnement hors-ligne.
-                    </li>
+                    <!-- Carte 2 -->
+                    <article class="p-6 bg-white shadow rounded-xl border border-gray-200 hover:shadow-lg transition">
+                        <h4 class="font-semibold text-lg text-[color:var(--text)]">
+                            "Making a PWA work offline with Service Workers" — MDN
+                        </h4>
+                        <p class="text-sm text-[color:var(--muted)] mt-3">
+                            Guide technique sur le fonctionnement hors-ligne.
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers"
+                        target="_blank"
+                        class="inline-flex items-center gap-1 text-[color:var(--accent)] mt-4 text-sm hover:underline">
+                            Consulter l’article <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </article>
 
-                    <li>
-                        <strong>"Twitter Lite Case Study" — web.dev</strong><br>
-                        Comment Twitter a réduit son poids et augmenté son engagement grâce à une PWA.
-                    </li>
+                    <!-- Carte 3 -->
+                    <article class="p-6 bg-white shadow rounded-xl border border-gray-200 hover:shadow-lg transition">
+                        <h4 class="font-semibold text-lg text-[color:var(--text)]">
+                            "Twitter Lite Case Study" — web.dev
+                        </h4>
+                        <p class="text-sm text-[color:var(--muted)] mt-3">
+                            Comment Twitter a augmenté ses performances grâce à une PWA.
+                        </p>
+                        <a href="https://web.dev/twitter/"
+                        target="_blank"
+                        class="inline-flex items-center gap-1 text-[color:var(--accent)] mt-4 text-sm hover:underline">
+                            Consulter l’article <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </article>
 
-                    <li>
-                        <strong>"PWA vs Native Apps: Which is Better in 2024?" — Medium</strong><br>
-                        Analyse comparative sur les performances et les usages.
-                    </li>
+                    <!-- Carte 4 -->
+                    <article class="p-6 bg-white shadow rounded-xl border border-gray-200 hover:shadow-lg transition">
+                        <h4 class="font-semibold text-lg text-[color:var(--text)]">
+                            "PWA vs Native Apps: Which is Better in 2024?" — Medium
+                        </h4>
+                        <p class="text-sm text-[color:var(--muted)] mt-3">
+                            Analyse comparative entre PWA et applications natives.
+                        </p>
+                        <a href="https://medium.com/search?q=PWA%20vs%20Native%20Apps"
+                        target="_blank"
+                        class="inline-flex items-center gap-1 text-[color:var(--accent)] mt-4 text-sm hover:underline">
+                            Consulter l’article <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </article>
 
-                    <li>
-                        <strong>"Installing PWAs on Desktop" — web.dev</strong><br>
-                        Étude sur l’adoption des PWA sur ordinateur.
-                    </li>
+                    <!-- Carte 5 -->
+                    <article class="p-6 bg-white shadow rounded-xl border border-gray-200 hover:shadow-lg transition">
+                        <h4 class="font-semibold text-lg text-[color:var(--text)]">
+                            "Installing PWAs on Desktop" — web.dev
+                        </h4>
+                        <p class="text-sm text-[color:var(--muted)] mt-3">
+                            Les PWA se démocratisent aussi sur ordinateur.
+                        </p>
+                        <a href="https://web.dev/installable/"
+                        target="_blank"
+                        class="inline-flex items-center gap-1 text-[color:var(--accent)] mt-4 text-sm hover:underline">
+                            Consulter l’article <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </article>
 
-                </ul>
+                </div>
             </section>
 
 
