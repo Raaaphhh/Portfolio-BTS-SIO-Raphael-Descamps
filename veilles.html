@@ -131,16 +131,19 @@
                         VEILLE TECHNOLOGIQUE
                     </h1>
                     <div class="w-24 h-[3px] bg-white mx-auto mt-4 rounded-full"></div>
+                    <a href="#section-intro" class="inline-block mt-6 px-6 py-3 bg-[color:var(--accent)] text-white font-semibold rounded-lg shadow-md hover:bg-[color:var(--accent)]/90">
+                        En savoir plus
+                    </a>
                 </div>
             </section>
             
 
             <!-- ========================= 1) INTRODUCTION ========================= -->
-            <section class="py-20 px-6 max-w-4xl mx-auto">
+            <section id="section-intro" class="py-20 px-6 max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-6">Introduction</h2>
                 <p class="text-lg text-[color:var(--muted)] leading-relaxed text-center">
-                    La veille technologique consiste à surveiller de manière systématique les évolutions, innovations 
-                    et tendances d’un domaine donné. Elle permet à un développeur de rester informé des avancées, 
+                    La veille technologique consiste à surveiller de manière fréquente les évolutions et innovations 
+                    d’un domaine / sujet. Elle permet à un développeur de rester informé des avancées, 
                     d’anticiper les changements et de maintenir ses compétences à jour dans un secteur en constante évolution 
                     comme l’informatique.
                 </p>
@@ -161,94 +164,111 @@
                     Les PWA répondent à des besoins concrets des entreprises : réduire les coûts de développement 
                     (une seule application pour tous les supports), améliorer l'expérience utilisateur et augmenter 
                     les taux de conversion. Des entreprises comme <strong>Twitter</strong>, <strong>Starbucks</strong> 
-                    ou <strong>Alibaba</strong> ont obtenu des résultats remarquables grâce à cette technologie.
+                    ou <strong>Alibaba</strong> ont obtenu de trés bon resultats grâce à cette technologie.
                     <br><br>
                     Ce sujet me permet de suivre l’évolution du développement web moderne, de comprendre les choix 
-                    stratégiques des entreprises et d’approfondir mes connaissances en JavaScript, Service Workers et API web modernes.
+                    stratégiques des entreprises et d’approfondir mes connaissances.
                 </p>
             </section>
 
 
             <!-- ========================= 3) OUTILS DE VEILLE ========================= -->
             <section class="py-20 px-6 max-w-6xl mx-auto bg-gray-50 border-y border-gray-200">
-                <h2 class="text-3xl font-bold text-center mb-10">Mes outils et méthodes de veille</h2>
+            <h2 class="text-3xl font-bold text-center mb-10">Mes outils et méthodes de veille</h2>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-
-                    <!-- RSS -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">📰 Flux RSS</h4>
-                        <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
-                            <li><strong>Feedly</strong> — centralisation des flux</li>
-                            <li>web.dev (Google)</li>
-                            <li>MDN Web Docs</li>
-                            <li>CSS-Tricks</li>
-                            <li>Dev.to</li>
-                        </ul>
-                    </div>
-
-                    <!-- Google Alerts -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">🔔 Google Alerts</h4>
-                        <p class="text-[color:var(--muted)] text-sm">
-                            Mots-clés surveillés :
-                        </p>
-                        <ul class="text-[color:var(--muted)] text-sm mt-1">
-                            <li>• Progressive Web App</li>
-                            <li>• PWA Case Study</li>
-                            <li>• Service Worker</li>
-                        </ul>
-                        <p class="text-[color:var(--muted)] text-sm mt-2">
-                            Fréquence : alertes hebdomadaires
-                        </p>
-                    </div>
-
-                    <!-- Sites -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">🌐 Sites spécialisés</h4>
-                        <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
-                            <li>web.dev / PWA Guides</li>
-                            <li>Mozilla MDN</li>
-                            <li>Medium (#PWA)</li>
-                            <li>Chrome Developers</li>
-                        </ul>
-                    </div>
-
-                    <!-- Newsletters -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">📧 Newsletters</h4>
-                        <ul class="text-[color:var(--muted)] text-sm">
-                            <li>JavaScript Weekly</li>
-                            <li>Frontend Focus</li>
-                            <li>Web.dev Newsletter</li>
-                        </ul>
-                    </div>
-
-                    <!-- Vidéos -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">🎥 YouTube / Conférences</h4>
-                        <ul class="text-[color:var(--muted)] text-sm">
-                            <li>Google Chrome Developers</li>
-                            <li>Fireship</li>
-                            <li>Grafikart</li>
-                            <li>Google I/O</li>
-                        </ul>
-                    </div>
-
-                    <!-- Réseaux -->
-                    <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
-                        <h4 class="font-semibold text-lg mb-2">💼 Réseaux professionnels</h4>
-                        <ul class="text-[color:var(--muted)] text-sm">
-                            <li>LinkedIn (#PWA #WebDev)</li>
-                            <li>Twitter/X (@ChromiumDev)</li>
-                            <li>GitHub (Workbox, next-pwa)</li>
-                        </ul>
-                    </div>
-
+                <!-- RSS -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-rss text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">Flux RSS</h4>
                 </div>
-            </section>
+                <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
+                    <li><strong>Feedly</strong> — centralisation des flux</li>
+                    <li>web.dev (Google)</li>
+                    <li>MDN Web Docs</li>
+                    <li>CSS-Tricks</li>
+                    <li>Dev.to</li>
+                </ul>
+                </div>
 
+                <!-- Google Alerts -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-bell text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">Google Alerts</h4>
+                </div>
+                <p class="text-[color:var(--muted)] text-sm">
+                    Mots-clés surveillés :
+                </p>
+                <ul class="text-[color:var(--muted)] text-sm mt-1">
+                    <li>• Progressive Web App</li>
+                    <li>• PWA Case Study</li>
+                    <li>• Service Worker</li>
+                </ul>
+                <p class="text-[color:var(--muted)] text-sm mt-2">
+                    Fréquence : alertes hebdomadaires
+                </p>
+                </div>
+
+                <!-- Sites -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-globe2 text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">Sites spécialisés</h4>
+                </div>
+                <ul class="text-[color:var(--muted)] text-sm leading-relaxed">
+                    <li>web.dev / PWA Guides</li>
+                    <li>Mozilla MDN</li>
+                    <li>Medium (#PWA)</li>
+                    <li>Chrome Developers</li>
+                </ul>
+                </div>
+
+                <!-- Newsletters -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-envelope-open text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">Newsletters</h4>
+                </div>
+                <ul class="text-[color:var(--muted)] text-sm">
+                    <li>JavaScript Weekly</li>
+                    <li>Frontend Focus</li>
+                    <li>Web.dev Newsletter</li>
+                </ul>
+                </div>
+
+                <!-- Vidéos -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-play-btn-fill text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">YouTube / Conférences</h4>
+                </div>
+                <ul class="text-[color:var(--muted)] text-sm">
+                    <li>Google Chrome Developers</li>
+                    <li>Fireship</li>
+                    <li>Grafikart</li>
+                    <li>Google I/O</li>
+                </ul>
+                </div>
+
+                <!-- Réseaux -->
+                <div class="p-6 bg-white rounded-xl shadow border border-gray-200">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="bi bi-people text-xl text-[color:var(--accent)]"></i>
+                    <h4 class="font-semibold text-lg">Réseaux professionnels</h4>
+                </div>
+                <ul class="text-[color:var(--muted)] text-sm">
+                    <li>LinkedIn (#PWA #WebDev)</li>
+                    <li>Twitter/X (@ChromiumDev)</li>
+                    <li>GitHub (Workbox, next-pwa)</li>
+                </ul>
+                </div>
+
+            </div>
+            </section>
+  
 
             <!-- ========================= 4) ARTICLES SUIVIS ========================= -->
             <section class="py-20 px-6 max-w-6xl mx-auto">
@@ -334,24 +354,8 @@
             </section>
 
 
-            <!-- ========================= 5) SYNTHÈSE ========================= -->
-            <section class="py-20 px-6 max-w-4xl mx-auto bg-gray-50 border-y border-gray-200">
-                <h2 class="text-3xl font-bold text-center mb-6">Ce que j’ai appris grâce à ma veille</h2>
-
-                <p class="text-lg text-[color:var(--muted)] leading-relaxed">
-                    Grâce à ma veille sur les PWA, j’ai pu comprendre les enjeux techniques et stratégiques 
-                    des applications web modernes. J’ai découvert les outils essentiels comme Workbox, 
-                    les limites du support iOS, les études de cas des grandes entreprises et les nouvelles API du web 
-                    (Background Sync, Web Share, Web App Manifest).
-                    <br><br>
-                    Cette veille enrichit mes projets personnels et me permet d’adopter de bonnes pratiques 
-                    dans mes développements futurs.
-                </p>
-            </section>
-
-
             <!-- ========================= 6) FRÉQUENCE DE VEILLE ========================= -->
-            <section class="py-20 px-6 max-w-4xl mx-auto">
+            <section class="py-20 px-6 max-w-4xl mx-auto bg-gray-50 border-y border-gray-200">
                 <h2 class="text-3xl font-bold text-center mb-6">Fréquence de veille</h2>
 
                 <p class="text-lg text-[color:var(--muted)] leading-relaxed text-center">
