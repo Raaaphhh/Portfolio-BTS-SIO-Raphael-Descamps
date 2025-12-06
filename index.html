@@ -28,10 +28,8 @@
 <body>
   <div class="min-h-screen md:flex">
 
-    <!-- Toggle mobile -->
     <input id="menu-toggle" type="checkbox" class="peer hidden" />
 
-    <!-- Sidebar gauche -->
     <aside
       class="fixed inset-y-0 left-0 z-40 h-screen w-72 md:w-[260px]
             -translate-x-full peer-checked:translate-x-0 transition-transform
@@ -125,19 +123,35 @@
     <!-- Contenu principal -->
     <main class="flex-1 md:ml-[260px] ml-0 bg-[color:var(--bg)]">
 
-      <section id="section-hero" class="h-screen flex items-center justify-center bg-[color:var(--panel)]">
-        <div class="container mx-auto flex flex-col md:flex-row items-center px-4">
+      <section id="section-hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+          
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/80 to-[color:var(--bg)]"></div>
+        <div class="absolute inset-0 opacity-20" 
+            style=" background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.22) 1px, transparent 0);
+            background-size: 24px 24px;">
+        </div>
+
+        <!-- Contenu -->
+        <div class="relative z-10 container mx-auto flex flex-col md:flex-row items-center px-4">
           <div class="text-center md:text-left md:w-1/2">
-            <h1 class="text-4xl md:text-5xl font-extrabold heading text-[color:var(--text)]">Bonjour</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold heading text-white">Bonjour</h1>
             <div class="mt-4 w-16 h-1 bg-[color:var(--accent)] rounded"></div>
-            <h1 class="text-4xl md:text-5xl font-extrabold heading text-[color:var(--text)] mt-4">Je m'appelle Raphaël Descamps</h1>
-            <p class="mt-4 text-lg text-[color:var(--muted)]">Étudiant ingénieur en informatique</p>
-            <a href="#section-a" class="mt-6 inline-block px-6 py-3 text-white bg-[color:var(--accent)] rounded-lg shadow hover:bg-blue-600">
+            <h1 class="text-4xl md:text-5xl font-extrabold heading text-white mt-4">
+              Je m'appelle Raphaël Descamps
+            </h1>
+            <p class="mt-4 text-lg text-slate-200">
+              Étudiant ingénieur en informatique
+            </p>
+            <a href="#section-a"
+              class="mt-6 inline-block px-6 py-3 text-white bg-[color:var(--accent)] rounded-lg shadow hover:bg-blue-600">
               En savoir plus
             </a>
           </div>
+
           <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img src="assets/imageDEVprotfolio.png" alt="Illustration de Raphaël Descamps" class="w-full max-w-md rounded-lg shadow-lg">
+            <img src="assets/imageDEVprotfolio.png"
+                alt="Illustration de Raphaël Descamps"
+                class="w-full max-w-md rounded-lg shadow-lg">
           </div>
         </div>
       </section>

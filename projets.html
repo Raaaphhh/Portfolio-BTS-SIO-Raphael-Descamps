@@ -118,6 +118,29 @@
         </aside>
 
         <main class="flex-1 md:ml-[260px] ml-0 bg-[color:var(--bg)]">
+            <!-- HERO PROJETS -->
+            <section
+                id="section-hero-projets"
+                class="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden"
+            >
+                <!-- Fond dégradé + motif -->
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/80 to-[color:var(--bg)]"></div>
+                <div class="absolute inset-0 opacity-20" 
+                    style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.22) 1px, transparent 0);
+                           background-size: 24px 24px;">
+                </div>
+
+                <!-- Contenu -->
+                <div class="relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-wide">
+                    Projets
+                </h1>
+                <div class="w-24 h-[3px] bg-white mx-auto mt-5 rounded-full"></div>
+                <p class="mt-4 text-base md:text-lg text-gray-200 max-w-xl mx-auto">
+                    Une sélection de projets réalisés à l’école et en entreprise.
+                </p>
+                </div>
+            </section>
 
             <section id="section-projets" class="py-20 bg-[color:var(--bg)] border-t border-gray-200">
                 <div class="container mx-auto px-6">
@@ -151,12 +174,23 @@
             
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                            <!-- Carte projet école 1 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <!-- Carte projet école 1 : GROUPY -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <!-- Checkbox de contrôle -->
+                                <input type="checkbox" id="gallery-groupy" class="hidden peer" />
+
+                                <!-- Image cliquable -->
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/groupy.png" alt="Aperçu du projet école 1"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-groupy" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/groupy.png" alt="Aperçu du projet Groupy"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
+                                <!-- Contenu carte -->
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Groupy - Site de vente d'achat groupé</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -177,14 +211,121 @@
                                         </a>
                                     </div>
                                 </div>
+
+                                <!-- Modal / Galerie Groupy -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <!-- Bouton fermeture -->
+                                        <label for="gallery-groupy"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Groupy
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/groupy.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Groupy - capture 1">
+
+                                            <!-- Ajoute d'autres images si tu veux :
+                                            <img src="assets/projets/groupy-1.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Groupy - capture 2">
+                                            <img src="assets/projets/groupy-2.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Groupy - capture 3">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
+                                    </div>
+                                </div>
                             </article>
             
-                            <!-- Carte projet école 2 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <!-- Carte projet école 3 : Portfolio -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <input type="checkbox" id="gallery-portfolio" class="hidden peer" />
+
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/csharp.png" alt="Aperçu du projet école 2"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-portfolio" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/portfolio.png" alt="Aperçu du projet Portfolio"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
+                                <div class="p-5">
+                                    <h4 class="font-semibold text-[color:var(--text)]">Portfolio</h4>
+                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
+                                        Portoflio actuelle, permettant de presenter mes projets, experiences et amibitions.
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                                        <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">HTML/CSS</span>
+                                        <span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200">TailWind</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3 text-sm">
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-link-45deg"></i> Démo
+                                        </a>
+                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
+                                            <i class="bi bi-github"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Modal / Galerie Portfolio -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-portfolio"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Portfolio
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/portfolio.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Portfolio - capture 1">
+                                            <!--
+                                            <img src="assets/projets/portfolio-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Portfolio - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Carte projet école 2 : C# -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <input type="checkbox" id="gallery-csharp" class="hidden peer" />
+
+                                <div class="aspect-[16/9] bg-gray-100">
+                                    <label for="gallery-csharp" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/csharp.png" alt="Aperçu du projet C#"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
+                                </div>
+
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Projet C#</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -204,30 +345,33 @@
                                         </a>
                                     </div>
                                 </div>
-                            </article>
-            
-                            <!-- Carte projet école 3 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
-                                <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/portfolio.png" alt="Aperçu du projet école 3"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-5">
-                                    <h4 class="font-semibold text-[color:var(--text)]">Portfolio</h4>
-                                    <p class="mt-2 text-sm text-[color:var(--muted)]">
-                                        Portoflio actuelle, permettant de presenter mes projets, experiences et amibitions.
-                                    </p>
-                                    <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                                        <span class="px-2 py-1 rounded bg-slate-50 text-slate-700 border border-slate-200">HTML/CSS</span>
-                                        <span class="px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200">TailWind</span>
-                                    </div>
-                                    <div class="mt-4 flex items-center gap-3 text-sm">
-                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                            <i class="bi bi-link-45deg"></i> Démo
-                                        </a>
-                                        <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
-                                            <i class="bi bi-github"></i> Code
-                                        </a>
+
+                                <!-- Modal / Galerie C# -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-csharp"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Projet C#
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/csharp.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Projet C# - capture 1">
+                                            <!--
+                                            <img src="assets/projets/csharp-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Projet C# - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
                                     </div>
                                 </div>
                             </article>
@@ -250,12 +394,20 @@
             
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-                            <!-- Carte entreprise 1 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <!-- Carte entreprise 1 : Kit-Alpha -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <input type="checkbox" id="gallery-kitalpha" class="hidden peer" />
+
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/kitalpha.png" alt="Aperçu du projet entreprise 1"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-kitalpha" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/kitalpha.png" alt="Aperçu du projet Kit-Alpha"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Kit-Alpha</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -273,14 +425,51 @@
                                         </a>
                                     </div>
                                 </div>
+
+                                <!-- Modal / Galerie Kit-Alpha -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-kitalpha"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Kit-Alpha
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/kitalpha.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Kit-Alpha - capture 1">
+                                            <!--
+                                            <img src="assets/projets/kitalpha-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Kit-Alpha - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
+                                    </div>
+                                </div>
                             </article>
             
-                            <!-- Carte entreprise 2 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <!-- Carte entreprise 2 : Add-ins -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <input type="checkbox" id="gallery-addins" class="hidden peer" />
+
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/addins.png" alt="Aperçu du projet entreprise 2"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-addins" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/addins.png" alt="Aperçu du projet Office Add-ins"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Office Add-ins (abandonnée)</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -288,7 +477,7 @@
                                     </p>
                                     <div class="mt-3 flex flex-wrap gap-2 text-xs">
                                         <span class="px-2 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Office.js</span>
-                                        <span class="px-2 py-1 rounded bg-violet-50 text-violet-700 border border-violet-200">HTML/CSS </span>
+                                        <span class="px-2 py-1 rounded bg-violet-50 text-violet-700 border border-violet-200">HTML/CSS</span>
                                     </div>
                                     <div class="mt-4 flex items-center gap-3 text-sm">
                                         <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
@@ -299,14 +488,51 @@
                                         </a>
                                     </div>
                                 </div>
+
+                                <!-- Modal / Galerie Add-ins -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-addins"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Office Add-ins
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/addins.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Office Add-ins - capture 1">
+                                            <!--
+                                            <img src="assets/projets/addins-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Office Add-ins - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
+                                    </div>
+                                </div>
                             </article>
             
-                            <!-- Carte entreprise 3 -->
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <!-- Carte entreprise 3 : Sisyphe -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition">
+                                <input type="checkbox" id="gallery-sisyphe" class="hidden peer" />
+
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/sisyphe.png" alt="Aperçu du projet entreprise 3"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-sisyphe" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/sisyphe.png" alt="Aperçu du projet Sisyphe"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Sisyphe — Copie de bases</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -327,15 +553,53 @@
                                         </a>
                                     </div>
                                 </div>
+
+                                <!-- Modal / Galerie Sisyphe -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-sisyphe"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Sisyphe
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/sisyphe.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Sisyphe - capture 1">
+                                            <!--
+                                            <img src="assets/projets/sisyphe-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Sisyphe - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
+                                    </div>
+                                </div>
                             </article>
 
                             <div class="hidden lg:block"></div>
 
-                            <article class="rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition mx-auto">
+                            <!-- Carte entreprise 4 : Crawler JobBoard -->
+                            <article class="relative rounded-xl overflow-hidden bg-[color:var(--panel)] border border-gray-200 shadow-sm hover:shadow-md transition mx-auto">
+                                <input type="checkbox" id="gallery-crawler" class="hidden peer" />
+
                                 <div class="aspect-[16/9] bg-gray-100">
-                                    <img src="assets/projets/crawler.png" alt="Aperçu du projet entreprise 4"
-                                        class="w-full h-full object-cover">
+                                    <label for="gallery-crawler" class="block w-full h-full cursor-pointer relative">
+                                        <img src="assets/projets/crawler.png" alt="Aperçu du projet Crawler JobBoard"
+                                             class="w-full h-full object-cover">
+                                        <span class="absolute bottom-2 right-2 bg-black/60 text-xs text-white px-3 py-1 rounded-full flex items-center gap-1">
+                                            <i class="bi bi-images"></i> Voir plus
+                                        </span>
+                                    </label>
                                 </div>
+
                                 <div class="p-5">
                                     <h4 class="font-semibold text-[color:var(--text)]">Crawler JobBoard</h4>
                                     <p class="mt-2 text-sm text-[color:var(--muted)]">
@@ -354,6 +618,35 @@
                                         <a href="#" class="inline-flex items-center gap-1 text-[color:var(--accent)] hover:underline">
                                             <i class="bi bi-github"></i> Code
                                         </a>
+                                    </div>
+                                </div>
+
+                                <!-- Modal / Galerie Crawler -->
+                                <div class="fixed inset-0 bg-black/70 z-50 opacity-0 pointer-events-none
+                                            flex items-center justify-center
+                                            peer-checked:opacity-100 peer-checked:pointer-events-auto">
+                                    <div class="relative bg-[color:var(--panel)] rounded-xl shadow-lg max-w-4xl w-[90%] p-4 md:p-6">
+                                        <label for="gallery-crawler"
+                                               class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 cursor-pointer">
+                                            <i class="bi bi-x-lg text-xl"></i>
+                                        </label>
+
+                                        <h3 class="text-lg font-semibold text-[color:var(--text)] mb-4">
+                                            Galerie — Crawler JobBoard
+                                        </h3>
+
+                                        <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2">
+                                            <img src="assets/projets/crawler.png"
+                                                 class="h-[60vh] w-auto rounded-lg object-contain snap-center"
+                                                 alt="Crawler JobBoard - capture 1">
+                                            <!--
+                                            <img src="assets/projets/crawler-1.png" class="h-[60vh] w-auto rounded-lg object-contain snap-center" alt="Crawler JobBoard - capture 2">
+                                            -->
+                                        </div>
+
+                                        <p class="mt-3 text-xs text-[color:var(--muted)] text-center">
+                                            Faites défiler horizontalement pour voir les différentes captures du projet.
+                                        </p>
                                     </div>
                                 </div>
                             </article>
